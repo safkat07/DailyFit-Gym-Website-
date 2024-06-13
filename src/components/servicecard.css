@@ -1,0 +1,47 @@
+#serviceCard {
+    position: relative;
+    overflow: hidden;
+}
+
+#serviceCard::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(226, 18, 18, 0.95);
+    left: -100%;
+    top: 0;
+    transition: left ease 0.4s;
+    z-index: 1;
+}
+
+#serviceCard:hover::after {
+    left: 0;
+}
+
+#serviceCard div {
+    position: relative;
+    z-index: 2;
+    transition: all ease 1s;
+}
+
+
+#serviceCard::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 150px solid transparent;
+    border-bottom: 150px solid rgba(0, 0, 0, 0.644);
+    top: -150px;
+    right: 0;
+    rotate: -90deg;
+    transition: top ease 0.4s;
+    z-index: 3;
+
+}
+
+#serviceCard:hover::before {
+    top: 0;
+    
+}
